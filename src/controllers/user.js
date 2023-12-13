@@ -124,6 +124,14 @@ module.exports = {
     },
 
     verify: async (req, res) => {
+        /*
+            #swagger.tags = ['Authentication']
+            #swagger.summary = 'Email Authentication'
+            #swagger.description = `
+                <p>id: "...userId..."</p>
+                <p>verifyCode: "...passwordEncrypt(email)..."</p>
+            `
+        */
         // console.log(req.query)
         const { id: _id, verifyCode } = req.query
         const user = await User.findOne({ _id })
@@ -135,7 +143,7 @@ module.exports = {
             sendMail(
                 user.email,
                 'Email Verified',
-                'Email Verified'                
+                'Email Verified'
             )
             res.status(200).send({
                 error: false,
