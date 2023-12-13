@@ -76,6 +76,32 @@
         }
       }
     },
+    "/users/verify": {
+      "get": {
+        "tags": [
+          "Authentication"
+        ],
+        "summary": "Email Authentication",
+        "description": "\r  <p>id: \"...userId...\"</p>\r  <p>verifyCode: \"...passwordEncrypt(email)...\"</p>\r  ",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "type": "string"
+          },
+          {
+            "name": "verifyCode",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/users/": {
       "get": {
         "tags": [
@@ -761,6 +787,18 @@
                 }
               }
             },
+            "emailVerified": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "function"
+                },
+                "default": {
+                  "type": "boolean",
+                  "example": false
+                }
+              }
+            },
             "firstName": {
               "type": "object",
               "properties": {
@@ -923,6 +961,19 @@
                 "default": {
                   "type": "boolean",
                   "example": true
+                }
+              }
+            },
+            "images": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "function"
+                },
+                "default": {
+                  "type": "array",
+                  "example": [],
+                  "items": {}
                 }
               }
             },
