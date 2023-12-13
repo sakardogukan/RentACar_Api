@@ -50,7 +50,7 @@
 ---
 
 ### ER (Entity Relationship Diagram) Diagram
-<img src="./src/img/erdRentACarAPI.png" width="650" height="450" alt="ERD"></img> 
+<img src="./src/img/erdRentACarAPI.png" width="650" height="500" alt="ERD"></img> 
 
 ---
 
