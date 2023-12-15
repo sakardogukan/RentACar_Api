@@ -2,7 +2,6 @@
 /* -------------------- INDEX.JS ------------------ */
 //! Required Moduls:
 const express = require('express')
-const { dbConneciton } = require('./src/config/dbConnection')
 const app = express()
 require('dotenv').config()
 const PORT = process.env?.PORT || "8000"
